@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>BMI Calculator</title>
+    <script src="node_modules/toastify-js/toastify.min.js"></script>
+    <link rel="stylesheet" href="node_modules/toastify-js/src/toastify.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="input-container">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" step="0.1" required>
+        </div>
+        <div class="input-container">
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" step="0.1" required>
+        </div>
+        <button id="calculate">Calculate BMI</button>
+    </div>
+    <div id="result" class="hidden">
+        <p>Your BMI is: <span id="bmi"></span></p>
+        <p>You are <span id="status"></span></p>
+        <button id="view-diet">View Diet</button>
+        <div id="diet-plan" class="hidden">
+            <h2>Diet Plan</h2>
+            <div id="underweight-diet" class="diet hidden">
+                <h3>Underweight Diet</h3>
+                <p>If your BMI indicates that you are underweight, it's important to focus on gaining weight in a healthy way. Here's a basic dietary guideline to help you gain weight:</p>
+                <ul>
+                    <li>Consume more calories than you burn. You can calculate your daily caloric needs with the help of a dietitian.</li>
+                    <li>Eat nutrient-dense foods to ensure you gain healthy weight, including lean proteins, whole grains, and healthy fats.</li>
+                    <li>Incorporate a variety of protein sources such as lean meats, poultry, fish, dairy, and plant-based options like beans and nuts.</li>
+                    <li>Eat small, frequent meals throughout the day to increase your calorie intake.</li>
+                    <li>Include healthy snacks between meals, such as yogurt, nuts, and smoothies.</li>
+                    <li>Opt for high-calorie foods like avocados, olive oil, and nuts.</li>
+                    <li>Stay hydrated by drinking enough water and healthy beverages.</li>
+                    <li>Avoid excessive consumption of low-calorie or empty-calorie foods that could fill you up without providing necessary nutrients.</li>
+                    <li>Consult with a healthcare professional or dietitian to create a personalized diet plan and monitor your progress.</li>
+                </ul>
+            </div>
+            
+            <div id="normal-diet" class="diet hidden">
+                <h3>Normal Diet</h3>
+                <p>A normal BMI indicates that your weight is within the healthy range for your height. To maintain your current weight and overall health, consider the following dietary guidelines:</p>
+                <ul>
+                    <li>Eat a balanced diet with a variety of fruits, vegetables, lean proteins, and whole grains.</li>
+                    <li>Aim for three balanced meals and healthy snacks throughout the day.</li>
+                    <li>Stay hydrated by drinking plenty of water (about 8 cups per day).</li>
+                    <li>Limit processed foods, sugary beverages, and excessive snacking.</li>
+                    <li>Control portion sizes to avoid overeating.</li>
+                    <li>Monitor your daily caloric intake to ensure it aligns with your energy needs.</li>
+                    <li>Consider consulting a nutritionist or dietitian for personalized dietary recommendations.</li>
+                </ul>
+            </div>
+            
+            <div id="overweight-diet" class="diet hidden">
+                <h3>Overweight Diet</h3>
+                <p>If your BMI indicates that you are overweight, it's important to focus on losing weight in a healthy and sustainable way. Here's a basic dietary guideline to help you manage your weight:</p>
+                <ul>
+                    <li>Calculate your daily caloric needs with the help of a dietitian or a reliable online tool and aim to create a caloric deficit for weight loss.</li>
+                    <li>Choose nutrient-dense foods and incorporate plenty of fruits, vegetables, and whole grains into your diet.</li>
+                    <li>Opt for lean protein sources such as poultry, fish, and plant-based options like beans and legumes.</li>
+                    <li>Limit the intake of high-calorie and low-nutrient foods, including sugary beverages, processed snacks, and fried foods.</li>
+                    <li>Practice portion control and avoid overeating. Use smaller plates to help manage portion sizes.</li>
+                    <li>Engage in regular physical activity to support your weight loss goals. Aim for a combination of aerobic and strength-training exercises.</li>
+                    <li>Stay hydrated by drinking water throughout the day. Sometimes, thirst is mistaken for hunger.</li>
+                    <li>Consider consulting with a registered dietitian or healthcare professional to create a personalized diet plan and monitor your progress.</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.1/toastify.min.js"></script>
+</body>
+</html>
